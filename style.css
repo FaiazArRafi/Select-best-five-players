@@ -1,0 +1,8 @@
+.header-background {
+    height: 400px;
+    background-color: black;
+}
+
+.header-background h1 {
+    color: white;
+}
