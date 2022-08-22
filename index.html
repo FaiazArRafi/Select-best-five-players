@@ -24,57 +24,80 @@
 
                 <div class="w-48 border border-black rounded-lg justify-center">
                     <img class="w-50 h-30 rounded-lg" src="images/ronaldo.jpg" alt="">
-                    <h5 class="font-semibold mt-2 text-center text-lg">Cristiano Ronaldo</h5>
+                    <h5 id="name-ronaldo" class="font-semibold mt-2 text-center text-lg">Cristiano Ronaldo</h5>
                     <button
-                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center ">Select</button>
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center"
+                        onclick="addToList(this)">Select</button>
                 </div>
+
                 <div class="w-48 border border-black rounded-lg justify-center">
                     <img class="w-50 h-30 rounded-lg" src="images/messi.jpg" alt="">
                     <h5 class="font-semibold mt-2 text-center text-lg">Lionel Messi</h5>
                     <button
-                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center ">Select</button>
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center "
+                        onclick="addToList(this)">Select</button>
                 </div>
                 <div class="w-48 border border-black rounded-lg justify-center">
                     <img class="w-50 h-30 rounded-lg" src="images/neymar.jpg" alt="">
                     <h5 class="font-semibold mt-2 text-center text-lg">Neymar Jr</h5>
                     <button
-                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center ">Select</button>
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center "
+                        onclick="addToList(this)">Select</button>
                 </div>
                 <div class="w-48 border border-black rounded-lg justify-center">
                     <img class="w-50 h-50 rounded-lg" src="images/benzema.png" alt="">
                     <h5 class="font-semibold mt-2 text-center text-lg">Karim Benzama</h5>
                     <button
-                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center ">Select</button>
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center "
+                        onclick="addToList(this)">Select</button>
                 </div>
                 <div class="w-48 border border-black rounded-lg justify-center">
                     <img class="w-50 h-50 rounded-lg" src=" images/jamal.jpg" alt="">
                     <h5 class="font-semibold mt-2 text-center text-lg">Jamal Bhuiyan</h5>
                     <button
-                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center ">Select</button>
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center "
+                        onclick="addToList(this)">Select</button>
                 </div>
                 <div class="w-48 border border-black rounded-lg justify-center">
                     <img class="w-50 h-30 rounded-lg" src="images/harry.png" alt="">
                     <h5 class="font-semibold mt-2 text-center text-lg">Harry Kane</h5>
                     <button
-                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center ">Select</button>
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center "
+                        onclick="addToList(this)">Select</button>
                 </div>
 
             </div>
 
+            <!-- selected 5 -->
+
             <div class="basis-1/4 mt-5">
-                <div class="w-48 h-1/2 border border-black rounded-lg justify-center ">
+                <div class="w-48 h-1/2 border border-black rounded-lg justify-center bla">
                     <h3 class="text-2xl text-center font-bold mt-3">Selected 5</h3>
-                    <ul>
-                        <li>1.</li>
-                        <li>2.</li>
-                        <li>3.</li>
-                        <li>4.</li>
-                        <li>5.</li>
+
+                    <ul id="selected-five">
+
                     </ul>
                 </div>
 
-                <div class="w-60 h-1/2 border border-black rounded-lg justify-center  mt-5 ">
-                    <h3 class="text-2xl text-center font-bold mt-3">Budget</h3>
+                <!-- budget -->
+
+                <div class="w-60 h-2/3 border border-black rounded-lg justify-center pl-3 mt-5 ">
+                    <h3 class="text-2xl text-center font-bold my-3">Budget</h3>
+                    <label for="">Per Player</label>
+                    <input class="border border-black w-1/2 mt-2" id="per-player" type="text">
+                    <button
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-2 justify-center"
+                        id="btn-player-calculation">Calculate</button>
+                    <h3 class="my-2">Player Expenses $<span id="player-expenses"> </span></h3>
+                    <label for="">Manger</label>
+                    <input class="border border-black w-1/2 my-2 " id="manager" type="text">
+                    <br>
+                    <label for="">Coach</label>
+                    <input class="border border-black w-1/2 mt-2 " id="coachgit " type="text">
+                    <button
+                        class="text-white bg-blue-500 hover:bg-sky-800 font-medium rounded-lg text-md px-10 py-2.5 text-center ml-6 mb-2 mt-4 justify-center"
+                        id="btn-total-calculation">Calculate Total</button>
+                    <h3>Total $<span id="total-expenses"> </span></h3>
                 </div>
             </div>
 
@@ -82,6 +105,7 @@
 
     </main>
 
+    <script src="players.js"></script>
 </body>
 
 </html>
