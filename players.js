@@ -21,6 +21,7 @@ function playersList() {
 }
 
 function addToList(element) {
+    element.disabled = true;
     const playerName = element.parentNode.children[1].innerText;
 
     const pd = {
