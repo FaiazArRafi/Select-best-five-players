@@ -14,8 +14,9 @@ function playersList() {
         `;
 
         listContainer.appendChild(li);
-        return li;
+
     }
+
 
 }
 
@@ -26,7 +27,12 @@ function addToList(element) {
         playerName: playerName,
     }
 
-    list.push(pd);
+    if (list.length < 5) {
+        list.push(pd);
+    }
+    else {
+        alert("Sorry, You can't select more than five players");
+    }
 
     playersList();
 }
