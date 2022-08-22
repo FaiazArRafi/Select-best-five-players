@@ -22,6 +22,9 @@ function playersList() {
 
 function addToList(element) {
     element.disabled = true;
+
+    element.style.backgroundColor = 'gray';
+
     const playerName = element.parentNode.children[1].innerText;
 
     const pd = {
