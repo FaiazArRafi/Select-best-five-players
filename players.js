@@ -48,3 +48,36 @@ document.getElementById('btn-player-calculation').addEventListener('click', func
     return playerExpenses;
 })
 
+document.getElementById('btn-total-calculation').addEventListener('click', function () {
+
+    const perPlayerField = document.getElementById('per-player');
+    const perPlayerString = perPlayerField.value;
+    const perPlayer = parseFloat(perPlayerString);
+
+
+    const playerExpensesField = document.getElementById('player-expenses');
+    const playerExpensesString = playerExpensesField.innerText;
+    const playerExpenses = parseFloat(playerExpensesString);
+
+    const expenses = perPlayer * 5;
+
+    playerExpensesField.innerText = expenses;
+
+    const managerField = document.getElementById('manager');
+    const managerString = managerField.value;
+    const manager = parseFloat(managerString);
+
+    const coachField = document.getElementById('coach');
+    const coachString = coachField.value;
+    const coach = parseFloat(coachString);
+
+    const totalExpensesField = document.getElementById('total-expenses');
+    const totalExpensesString = totalExpensesField.innerText;
+    const totalExpenses = parseFloat(totalExpensesString);
+
+
+    const total = manager + coach + playerExpenses;
+
+    totalExpensesField.innerText = total;
+
+})
