@@ -27,6 +27,7 @@ function addToList(element) {
         playerName: playerName,
     }
 
+
     if (list.length < 5) {
         list.push(pd);
     }
