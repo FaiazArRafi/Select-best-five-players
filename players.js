@@ -70,7 +70,7 @@ document.getElementById('btn-total-calculation').addEventListener('click', funct
     const playerExpensesString = playerExpensesField.innerText;
     const playerExpenses = parseFloat(playerExpensesString);
 
-    const expenses = perPlayer * 5;
+    const expenses = perPlayer * list.length;
 
     playerExpensesField.innerText = expenses;
 
